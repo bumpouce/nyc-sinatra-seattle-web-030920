@@ -9,9 +9,8 @@ Figure Name: <input type="text" name="figure[name]"><br>
 Figure Title:<br>
 <%# title checkbox %>
 <% @titles.each do |title| %>
-
-<input type="checkbox" name="title[name]" value="<%= title.id %>">
-<label for="title[name]"> <%= title.name %></label><br>
+<input type="checkbox" name="titles[id]" value=<%= "#{title.id}" %>>
+<label for="titles[id]"> <%= title.name %></label><br>
 
 <% end %>
 or create a new title: <input type="text" name="title[name]"><br>
@@ -21,10 +20,13 @@ or create a new title: <input type="text" name="title[name]"><br>
 Figure Landmark:<br>
 <%# landmark checkbox %>
 <% @landmarks.each do |landmark| %>
-<input type="checkbox" name="landmark[name]">
-<label for="landmark[name]"> <%= landmark.name %></label><br>
+<input type="checkbox" name="landmark[id]" value=<%= "#{landmark.id} "%>>
+<label for="landmark[id]"> <%= landmark.name %></label><br>
 <% end %>
-or create a new landmark: <input type="text" name="landmark[name]"><br>
+or create a new landmark: <input type="text" name="landmark[name]"> 
+<label for="landmark[year_completed]">Year Completed:</label>
+<input type="text" name="landmark[year_completed]"> <br>
+
 <br>
 <input type="submit" value="Create Figure">
 <br>
